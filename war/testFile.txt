@@ -1,0 +1,4 @@
+Occupied
+Empty
+Not Occupied
+
