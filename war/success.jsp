@@ -66,9 +66,9 @@ font-size: 25px;
 <h1> Comet </h1>
 <h2> Parking </h2>
 <div id="fillerdiv1"> </div>
-
+<p> '${fn:escapeXml(successMsg)}' </p>
 <p id="p1"> Registration Successful! 
-<a href="Login.html" id="link1"> Click here to login </a>
+<a href="Login.jsp" id="link1"> Click here to login </a>
 
  
 </body>

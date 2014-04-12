@@ -11,8 +11,30 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
  
     <servlet-mapping>
         <servlet-name>sign</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/guestbook.jsp</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>com.cometpark.LoginServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+   
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.cometpark.RegisterServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    
+    
     <welcome-file-list>
         <welcome-file>guestbook.jsp</welcome-file>
     </welcome-file-list>

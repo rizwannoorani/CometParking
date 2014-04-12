@@ -209,14 +209,13 @@ font-size: 20px;
 <p id="p1"> Please fill out the details below to register: </p>
 
 
-<form id="userregister" action="success.html">
+<form id="userregister" action="/Register">
 
-<label for="username" id="Username"> Username: </label> <input id="usernameBox" type="text" name="username">
+<label for="username" id="userName"> Username: </label> <input id="usernameBox" type="text" name="username">
 <label for="password" id="Password"> Password: </label> <input id="passwordBox" type="password" name="password">
 <label for="passwordConfirm" id="PasswordConfirm"> Confirm Password: </label> <input id="passwordConfirmBox" type="password" name="passwordConfirm">
-<label for="netid" id="Netid"> Net ID: </label> <input id="netidBox" type="text" name="netid">
-<label for="dropdown" id="Dropdown"> Parking Permit: </label>
-<select id="dropdown">
+<label for="permitType" id="Dropdown"> Parking Permit: </label>
+<select id="permitType">
   <option value="green">Green</option>
   <option value="gold">Gold</option>
   <option value="orange"> Orange</option>

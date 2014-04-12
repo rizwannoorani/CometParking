@@ -228,7 +228,7 @@ form.reset();
 
 <p id="p1"> User Login </p>
 
-<form id="userlogin" action="DummyDiv.html" onsubmit="clear1()">
+<form id="userlogin" action="/login" onsubmit="clear1()">
 
 <label for="username" id="Username"> Username: </label> <input id="usernameBox" type="text" name="username">
 <label for="password" id="Password"> Password: </label> <input id="passwordBox" type="password" name="password">
@@ -236,20 +236,20 @@ form.reset();
 </form>
 
 <p id="p2"> New User? </p>
-<a href="register.html" id="link1">Register here</a>
+<a href="register.jsp" id="link1">Register here</a>
 
 <div id="fillerdiv2"> </div>
 
 <p id="p3"> Administrator Login </p>
 
-<form id="adminlogin" action="admin.html" onsubmit="clear2()">
+<form id="adminlogin" action="admin.jsp" onsubmit="clear2()">
 
 <label for="usernameAdmin" id="UsernameAdmin"> AdminID: </label> <input id="usernameAdminBox" type="text" name="usernameAdmin">
 <label for="passwordAdmin" id="PasswordAdmin"> Password: </label> <input id="passwordAdminBox" type="password" name="passwordAdmin">
 <input type="submit" value="Submit" id="submit2">
 </form>
 
-<a href="registerAdmin.html" id="link2">Register Admin here </a>
+<a href="registerAdmin.jsp" id="link2">Register Admin here </a>
 
  
 </body>
