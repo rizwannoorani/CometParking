@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
 
 body 
@@ -59,7 +60,7 @@ font-family: "Times New Roman";
 font-size: 25px;
 }
 
-#usernameBox
+#userName
 {
 position: absolute;
 top: 250px;
@@ -76,7 +77,7 @@ font-family: "Times New Roman";
 font-size: 25px;
 }
 
-#passwordBox
+#password
 {
 position: absolute;
 top: 305px;
@@ -93,14 +94,14 @@ font-family: "Times New Roman";
 font-size: 25px;
 }
 
-#passwordConfirmBox
+#passwordConfirm
 {
 position: absolute;
 top: 365px;
 left: 230px;
 }
 
-#Netid
+#emailID
 {
 position: absolute;
 top: 415px;
@@ -110,7 +111,7 @@ font-family: "Times New Roman";
 font-size: 25px;
 }
 
-#netidBox
+#email
 {
 position: absolute;
 top: 420px;
@@ -127,7 +128,7 @@ font-family: "Times New Roman";
 font-size: 25px;
 }
 
-#dropdown
+#permitType
 {
 position: absolute;
 top: 475px;
@@ -199,6 +200,7 @@ font-size: 20px;
 
 </style>
 
+
 </head>
 <body>
 
@@ -209,11 +211,12 @@ font-size: 20px;
 <p id="p1"> Please fill out the details below to register: </p>
 
 
-<form id="userregister" action="/Register">
+<form id="userregister" action="/Register" method="post">
 
-<label for="username" id="userName"> Username: </label> <input id="usernameBox" type="text" name="username">
-<label for="password" id="Password"> Password: </label> <input id="passwordBox" type="password" name="password">
-<label for="passwordConfirm" id="PasswordConfirm"> Confirm Password: </label> <input id="passwordConfirmBox" type="password" name="passwordConfirm">
+<label for="username" id="Username"> Username: </label> <input id="userName" type="text" name="userName">
+<label for="password" id="Password"> Password: </label> <input id="password" type="password" name="password">
+<label for="passwordConfirm" id="PasswordConfirm"> Confirm Password: </label> <input id="passwordConfirm" type="password" name="passwordConfirm">
+<label for="email" id="emailID"> Email: </label> <input id="email" type="text" name="email">
 <label for="permitType" id="Dropdown"> Parking Permit: </label>
 <select id="permitType">
   <option value="green">Green</option>

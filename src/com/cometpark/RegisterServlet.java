@@ -21,15 +21,21 @@ public class RegisterServlet extends HttpServlet {
   public void doPost(HttpServletRequest req, HttpServletResponse resp)
       throws IOException {
 
-	  Entity userEntity = new Entity("UserObject", req.getParameter("Username"));
-	  userEntity.setUnindexedProperty("userName", req.getParameter("Username") );
-	  userEntity.setUnindexedProperty("password", req.getParameter("password") );
-	  userEntity.setUnindexedProperty("email", req.getParameter("email") );
-	  userEntity.setUnindexedProperty("permitType", req.getParameter("permitType") );
+	  Entity userEntity = new Entity("UserObject", req.getParameter("userName"));
+	  userEntity.setProperty("userName", req.getParameter("userName") );
+	  userEntity.setProperty("password", req.getParameter("password") );
+	  userEntity.setProperty("email", req.getParameter("email") );
+	  userEntity.setProperty("permitType", req.getParameter("permitType") );
 	  
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(userEntity);
-    
-    resp.sendRedirect("/success.jsp?successMsg=" + "The use has been added successfuly" );
+   /* Key k = KeyFactory.createKey("UserObject", req.getParameter("userName"));
+    try{
+    Entity submitEntity = datastore.get(k);
+    System.out.println("The user name is "+ submitEntity.getProperty("userName"));
+    }catch(Exception e){
+    	e.printStackTrace();
+    }*/
+    resp.sendRedirect("/success.jsp?userName=" + req.getParameter("userName") );
   }
 }

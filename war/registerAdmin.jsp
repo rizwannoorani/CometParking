@@ -193,9 +193,9 @@ font-size: 20px;
 <p id="p1"> Please fill out the details below to register as Administrator: </p>
 
 
-<form id="userregister" action="success.html">
+<form id="adminregister" action="/Register" method="post">
 
-<label for="username" id="Username"> Username: </label> <input id="usernameBox" type="text" name="username">
+<label for="username" id="Username"> Username: </label> <input id="usernameBox" type="text" name="userName">
 <label for="password" id="Password"> Password: </label> <input id="passwordBox" type="password" name="password">
 <label for="passwordConfirm" id="PasswordConfirm"> Confirm Password: </label> <input id="passwordConfirmBox" type="password" name="passwordConfirm">
 <label for="netid" id="Netid"> Employee ID: </label> <input id="netidBox" type="text" name="netid">

@@ -1,8 +1,18 @@
-<!DOCTYPE html>
+<%@ page import="com.google.appengine.api.datastore.DatastoreService" %>
+<%@ page import="com.google.appengine.api.datastore.DatastoreServiceFactory" %>
+<%@ page import="com.google.appengine.api.datastore.Entity" %>
+<%@ page import="com.google.appengine.api.datastore.FetchOptions" %>
+<%@ page import="com.google.appengine.api.datastore.Key" %>
+<%@ page import="com.google.appengine.api.datastore.KeyFactory" %>
+<%@ page import="com.google.appengine.api.datastore.Query" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+
+
 <html>
 <head>
 <style>
-
 body 
 {
 background-color:black;
@@ -49,6 +59,16 @@ font-family: "Georgia";
 font-size: 35px;
 }
 
+#p2
+{
+position: absolute;
+top: 190px;
+left: 20px;
+color: #99cccc;
+font-family: "Georgia";
+font-size: 35px;
+}
+
 #link1
 {
 position: absolute;
@@ -58,15 +78,26 @@ color: #99cccc;
 font-family: "Georgia";
 font-size: 25px;
 }
-
 </style>
 </head>
 <body>
+	
+
+<%
+	String userVal = request.getParameter("userName");
+	
+	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	Key k = KeyFactory.createKey("UserObject",userVal );
+	Entity userName = datastore.get(k);
+	String userValue = userName.getProperty("userName").toString();
+		
+%>
 
 <h1> Comet </h1>
 <h2> Parking </h2>
 <div id="fillerdiv1"> </div>
-<p> '${fn:escapeXml(successMsg)}' </p>
+
+<p id="p2"> Thank you for registering, <% out.println(userValue); %> </p>
 <p id="p1"> Registration Successful! 
 <a href="Login.jsp" id="link1"> Click here to login </a>
 

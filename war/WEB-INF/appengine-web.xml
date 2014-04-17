@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-  <application>babyshyriz</application>
+  <application>cometparkinggroupe</application>
   <version>2</version>
 
   <!--
@@ -34,6 +34,8 @@
 
 	<resource-files>
 	  <include path="guestbook.jsp" />
+	  <include path="DummyDiv.html" />
+	  <include path="admin.html" />
 	</resource-files>
 
 </appengine-web-app>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
 
 body 
@@ -209,8 +210,11 @@ font-size: 20px;
 
 function clear1()
 {
-var form = document.getElementById("userlogin");
-form.reset();
+
+	var form = document.getElementById("userLogin");
+	form.reset();
+	
+
 }
 
 function clear2()
@@ -228,12 +232,15 @@ form.reset();
 
 <p id="p1"> User Login </p>
 
-<form id="userlogin" action="/login" onsubmit="clear1()">
+<form id="userlogin" action="guestbook.jsp">
 
-<label for="username" id="Username"> Username: </label> <input id="usernameBox" type="text" name="username">
-<label for="password" id="Password"> Password: </label> <input id="passwordBox" type="password" name="password">
+<label for="username" id="Username"> Username: </label> <input id="usernameBox" type="text" name="userNameLogin">
+<label for="password" id="Password"> Password: </label> <input id="passwordBox" type="password" name="passwordLogin">
 <input type="submit" value="Submit" id="submit1">
 </form>
+
+
+<p id="errormessage"> </p>
 
 <p id="p2"> New User? </p>
 <a href="register.jsp" id="link1">Register here</a>
@@ -242,7 +249,7 @@ form.reset();
 
 <p id="p3"> Administrator Login </p>
 
-<form id="adminlogin" action="admin.jsp" onsubmit="clear2()">
+<form id="adminlogin" action="admin.html" onsubmit="clear2()">
 
 <label for="usernameAdmin" id="UsernameAdmin"> AdminID: </label> <input id="usernameAdminBox" type="text" name="usernameAdmin">
 <label for="passwordAdmin" id="PasswordAdmin"> Password: </label> <input id="passwordAdminBox" type="password" name="passwordAdmin">
