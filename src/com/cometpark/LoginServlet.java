@@ -30,14 +30,14 @@ public class LoginServlet extends HttpServlet {
 		try {
 		Entity userName = datastore.get(loginKey);
 		String retrievedUser = userName.getProperty("userName").toString();
-		request.setAttribute("userretrieve",retrievedUser);
+		//request.setAttribute("userretrieve",retrievedUser);
 		if(retrievedUser==null){
 				String errorMessage="Invalid Login";
 				response.sendRedirect("/Login.jsp?errMessage=" + errorMessage );
 		 }
 		else
 		{
-			response.sendRedirect("/DummyDiv.html");
+			response.sendRedirect("/guestbook.jsp");
 			
 		}
 		} catch (EntityNotFoundException e) {

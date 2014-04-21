@@ -27,6 +27,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.nio.CharBuffer;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -125,7 +127,7 @@ public class SignGuestbookServlet extends HttpServlet {
 			JsonObject jsonObject = (JsonObject) obj;
 			int type = jsonObject.get("type").getAsInt();
 			JsonElement controllerId = jsonObject.get("controllerId");
-			switch (type) {
+			switch (1) {
 			case Utils.TYPE_SPOTS_UPDATE:
 				JsonObject spotsJsonObject = jsonObject
 						.getAsJsonObject("spots");
@@ -141,12 +143,23 @@ public class SignGuestbookServlet extends HttpServlet {
 		updateClientView(spotsJsonObject.toString());
 		Iterator<Entry<String, JsonElement>> iterator = spotsJsonObject
 				.entrySet().iterator();
-		HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
+		
+	    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	    DateFormat dateFormat = new SimpleDateFormat ("yyyy/MM/dd HH:mm:ss");
+		//HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
 		while (iterator.hasNext()) {
 			Entry<String, JsonElement> entry = iterator.next();
 			int spotId = Integer.parseInt(entry.getKey());
 			int availability = entry.getValue().getAsInt();
-//			map.put(spotId, availability);
+			Date current = new Date();
+			
+			Entity statusEntity = new Entity("information",dateFormat.format(current));
+			statusEntity.setProperty("date",dateFormat.format(current));
+			statusEntity.setProperty("spotId",spotId);
+			statusEntity.setProperty("availability", availability);
+			
+			 datastore.put(statusEntity);
+	//		map.put(spotId, availability);
 		}
 		
 	}

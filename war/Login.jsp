@@ -15,7 +15,7 @@ position: absolute;
 top: 10px;
 left: 20px;
 font-family: "Georgia";
-font-size: 70px;
+font-size: 7em;
 color: #ccff99;
 text-shadow: 1px 1px #ff9966;
 }
@@ -24,9 +24,9 @@ h2
 {
 position: absolute;
 top: 0px;
-left: 260px;
+left: 400px;
 font-family: "Georgia";
-font-size: 70px;
+font-size: 7em;
 color: #ff9966;
 text-shadow: 1px 1px #ccff99;
 }
@@ -34,55 +34,57 @@ text-shadow: 1px 1px #ccff99;
 #fillerdiv1
 {
 position:absolute;
-top: 150px;
+top: 215px;
 background-color: grey;
-width: 550px;
+width: 100%;
 height: 5px;
 }
 
 #p1
 {
 position: absolute;
-top: 160px;
+top: 180px;
 left: 20px;
 color: #ccff99;
 font-family: "Georgia";
-font-size: 35px;
+font-size: 4em;
 text-decoration: underline;
 }
 
 #Username
 {
 position: absolute;
-top: 270px;
+top: 320px;
 left: 20px;
 color: white;
 font-family: "Times New Roman";
-font-size: 25px;
+font-size: 3em;
 }
 
 #usernameBox
 {
 position: absolute;
-top: 270px;
-left: 150px;
+top: 320px;
+left: 225px;
+font-size: 2em;
 }
 
 #Password
 {
 position: absolute;
-top: 320px;
+top: 390px;
 left: 20px;
 color: white;
 font-family: "Times New Roman";
-font-size: 25px;
+font-size: 3em;
 }
 
 #passwordBox
 {
 position: absolute;
-top: 320px;
-left: 150px;
+top: 390px;
+left: 225px;
+font-size: 2em;
 }
 
 input
@@ -105,100 +107,103 @@ input:focus
 #submit1
 {
 position: absolute;
-top: 390px;
-left: 90px;
+top: 475px;
+left: 250px;
+font-size: 2em;
 }
 
 #p2
 {
 position: absolute;
-top: 420px;
+top: 490px;
 left: 20px;
 color: white;
 font-family: "Georgia";
-font-size: 20px;
+font-size: 3em;
 }
 
 #link1
 {
 position: absolute;
-top: 440px;
-left: 120px;
+top: 540px;
+left: 260px;
 color: white;
 font-family: "Georgia";
-font-size: 20px;
+font-size: 3em;
 }
 
 #fillerdiv2
 {
 position:absolute;
-top: 200px;
-left: 600px;
+top: 610px;
 background-color: grey;
-width: 5px;
-height: 350px;
+width: 100%;
+height: 5px;
 }
 
 #p3
 {
 position: absolute;
-top: 160px;
-left: 630px;
+top: 590px;
+left: 20px;
 color: #ff9966;
 font-family: "Georgia";
-font-size: 35px;
+font-size: 4em;
 text-decoration: underline;
 }
 
 #UsernameAdmin
 {
 position: absolute;
-top: 270px;
-left: 630px;
+top: 740px;
+left: 20px;
 color: white;
 font-family: "Times New Roman";
-font-size: 25px;
+font-size: 3em;
 }
 
 #usernameAdminBox
 {
 position: absolute;
-top: 270px;
-left: 760px;
+top: 740px;
+left: 220px;
+font-size: 2em;
 }
 
 #PasswordAdmin
 {
 position: absolute;
-top: 320px;
-left: 630px;
+top: 810px;
+left: 20px;
 color: white;
 font-family: "Times New Roman";
-font-size: 25px;
+font-size: 3em;
 }
 
 #passwordAdminBox
 {
 position: absolute;
-top: 320px;
-left: 760px;
+top: 810px;
+left: 220px;
+font-size: 2em;
 }
 
 #submit2
 {
 position: absolute;
-top: 390px;
-left: 710px;
+top: 890px;
+left: 250px;
+font-size: 2em;
 }
 
 #link2
 {
 position: absolute;
-top: 440px;
-left: 630px;
+top: 970px;
+left: 20px;
 color: white;
 font-family: "Georgia";
-font-size: 20px;
+font-size: 3em;
 }
 
 

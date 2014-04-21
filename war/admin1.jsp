@@ -1,0 +1,139 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%@ page import="java.util.List,src.com.cometpark.server.model.InformationObj" %>
+
+<head>
+<style>
+
+body 
+{
+background-color:black;
+}
+
+h1
+{
+position: absolute;
+top: 10px;
+left: 20px;
+font-family: "Georgia";
+font-size: 70px;
+color: #ccff99;
+text-shadow: 1px 1px #ff9966;
+}
+
+h2
+{
+position: absolute;
+top: 0px;
+left: 260px;
+font-family: "Georgia";
+font-size: 70px;
+color: #ff9966;
+text-shadow: 1px 1px #ccff99;
+}
+
+#fillerdiv1
+{
+position:absolute;
+top: 150px;
+background-color: grey;
+width: 550px;
+height: 5px;
+}
+
+#p1
+{
+position: absolute;
+top: 160px;
+left: 20px;
+color: #99cccc;
+font-family: "Georgia";
+font-size: 30px;
+}
+
+#d1
+{
+position: absolute;
+top: 300px;
+left: 20px;
+width: 200px;
+height: 100px;
+background-color: #99cccc;
+}
+
+#d2
+{
+position: absolute;
+top: 300px;
+left: 300px;
+width: 200px;
+height: 100px;
+background-color: #99cccc;
+}
+
+#p2
+{
+position: absolute;
+top: 320px;
+left: 50px;
+font-family: "Georgia";
+font-size: 16px;
+}
+
+#p3
+{
+position: absolute;
+top: 320px;
+left: 310px;
+font-family: "Georgia";
+font-size: 16px;
+}
+
+#link1
+{
+position:absolute;
+top: 450px;
+left: 20px;
+color: white;
+font-family: "Georgia";
+font-size: 25px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<% 
+
+
+
+List<InformationObj> newList = List <InformationObj> request.getAttribute("infoList"); 
+// print the information about every category of the list
+for(newList info : list) {
+    out.println(info.getSpotId());
+    out.println(info.getAvailibility());
+    out.println(info.getDateValue());
+	}
+%>
+
+<h1> Comet </h1>
+<h2> Parking </h2>
+<div id="fillerdiv1"> </div>
+
+<p id="p1"> Choose function to perform: </p>
+
+<div id="d1"> </div> 
+
+<div id="d2"> </div> 
+
+<p id="p2"> Manage Parking Lot </p>
+
+<p id="p3"> Generate Parking Reports </p>
+
+<a href="/Login.jsp" id="link1"> Log out </a>
+ 
+</body>
+</html>
